@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: avg_orders_per_hour
+    description: "average number of orders per hour"
+    columns:
+      - name: average_order_count
+        description: Average order count
+        tests:
+          - not_null
+      
+  - name: users_with_order_count
+    description: Users with order count
+    columns:
+      - name: user_count
+        tests:
+            - not_null
+      - name: order_count
+        tests:
+          - not_null
+  
+  - name: count_user
+    description: number of users
+    columns:
+      - name: user_count
+        tests:
+          - not_null
